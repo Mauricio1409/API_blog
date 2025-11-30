@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'channels',
 
     # my apps
+    'apps.blog'
 
 ]
 
