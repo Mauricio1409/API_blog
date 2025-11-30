@@ -253,3 +253,4 @@ http-client.private.env.json
 
 
 .idea
+.dbdata/
