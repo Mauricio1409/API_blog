@@ -9,7 +9,7 @@ services:
       - "8000:8000"
     depends_on:
       - django_redis
-      - db
+      - django_db_blog
 
   django_redis:
     image: redis:latest
@@ -17,9 +17,9 @@ services:
     ports:
       - 6379:6379
 
-  db:
+  django_db_blog:
     image: postgres:latest
-    container_name: django_db
+    container_name: django_db_blog
     restart: always
     environment:
       POSTGRES_USER: django
@@ -28,5 +28,5 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - .dbdata:/var/lib/postgresql/data
+      - .dbdata:/var/lib/postgresql
 
